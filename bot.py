@@ -36,7 +36,7 @@ if IS_DOCKER:
     last_id_file = Path('/data') / 'last_id'
 if last_id_file.is_file():
     with open(last_id_file) as f:
-        print(int(f.read()))
+        last_id = int(f.read())
 
 print('Botvenon is starting...')
 print('Welcoming any users after id %d' % last_id)
